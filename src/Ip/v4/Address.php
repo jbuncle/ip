@@ -42,14 +42,14 @@ class Address
 
     /**
      * IP address represented as a long integer.
-     * 
-     * @var int 
+     *
+     * @var int
      */
     private $ip;
 
     /**
      * Create instance of IPv4Address.
-     * 
+     *
      * @param int $ip IP Address represented as an integer.
      */
     private function __construct($ip)
@@ -59,7 +59,7 @@ class Address
 
     /**
      * Get broadcast IP Address - '255.255.255.255'.
-     * 
+     *
      * @return Address
      */
     public static function getBroadcast()
@@ -107,9 +107,10 @@ class Address
     }
 
     /**
-     * 
+     * Create Address instance from a dotted notation string.
+     *
      * @param string $string
-     * 
+     *
      * @return Address
      * @throws InvalidIpException
      */
@@ -125,7 +126,7 @@ class Address
 
     /**
      * Get IP address formatted in dot notation.
-     * 
+     *
      * @return string
      */
     public function __toString()
@@ -135,7 +136,7 @@ class Address
 
     /**
      * Get IP address represented as a long integer.
-     * 
+     *
      * @return string
      */
     public function asLong()

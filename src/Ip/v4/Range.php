@@ -94,8 +94,9 @@ class Range
         $endIp = $ipLong->bitwise_or($inverseMask);
 
         //Return IP instances as array pair.
-        return new Range(
-                Address::fromFloat(hexdec($startIp->toHex())), Address::fromFloat(hexdec($endIp->toHex())));
+        $startIpAddress = Address::fromFloat(hexdec($startIp->toHex()));
+        $endIpAddress = Address::fromFloat(hexdec($endIp->toHex()));
+        return new Range($startIpAddress, $endIpAddress);
     }
 
     public static function fromFloats($start, $end)
@@ -164,5 +165,4 @@ class Range
     {
         return $this->endIp;
     }
-
 }

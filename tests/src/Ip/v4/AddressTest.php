@@ -150,5 +150,4 @@ class AddressTest extends PHPUnit_Framework_TestCase
         $ip = Address::fromString($string);
         $this->assertEquals($string, (string) $ip);
     }
-
 }

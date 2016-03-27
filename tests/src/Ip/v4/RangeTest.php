@@ -135,5 +135,4 @@ class RangeTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($start, (string) $cidrRange->getStartIp());
         $this->assertEquals($end, (string) $cidrRange->getEndIp());
     }
-
 }
