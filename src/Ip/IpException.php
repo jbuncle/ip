@@ -30,6 +30,7 @@ namespace Ip;
  * IpException
  *
  * @author James Buncle <jbuncle@hotmail.com>
+ * @codeCoverageIgnore Nothing to test here
  */
 class IpException extends \Exception
 {
