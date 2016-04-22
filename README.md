@@ -4,7 +4,7 @@
 [![codecov.io](https://codecov.io/github/jbuncle/ip/coverage.svg?branch=master)](https://codecov.io/github/jbuncle/ip?branch=master)
 [![codacy.com](https://api.codacy.com/project/badge/)](https://www.codacy.com/public/jbuncle/ip.git)
 
-Simple OO library for working with IP addresses and ranges in PHP 5.3+.
+Simple library for working with IP addresses and ranges in PHP 5.3+.
 
 ## Composer Installation
 Run `php composer.phar require jbuncle/ip`
