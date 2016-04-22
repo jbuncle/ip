@@ -36,7 +36,7 @@ class Util
 
     /**
      * Determines if the given string is an IP in v4 dot notation.
-     * 
+     *
      * @param string $string The string to check.
      * @return bool
      */
@@ -47,7 +47,7 @@ class Util
 
     /**
      * Determines if the given string is an IP in v6 Hex notation.
-     * 
+     *
      * @param string $string The string to check.
      * @return bool
      */
@@ -74,14 +74,5 @@ class Util
             $res += $parts[$index] * pow(hexdec('FF') + 1, 3 - $index);
         }
         return $res;
-    }
-
-    public static function toArrayOfArrays(array $array)
-    {
-        $arrOfArrays = array();
-        foreach ($array as $key => $value) {
-            $arrOfArrays[$key] = array($value);
-        }
-        return $arrOfArrays;
     }
 }

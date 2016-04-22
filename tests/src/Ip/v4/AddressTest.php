@@ -26,7 +26,6 @@
 
 namespace Ip\v4;
 
-use Ip\Util;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -63,23 +62,23 @@ class AddressTest extends PHPUnit_Framework_TestCase
 
     public function invalidDataProvider()
     {
-        return Util::toArrayOfArrays(array(
-                    '0,0,0,0',
-                    '256.256.256.256',
-                    '0.0.0.-1',
-                    '1.1.1',
-                    4294967296,
-                    -1,
-                    'a',
-                    '4294967296',
-                    '-1',
-                    '',
-                    true,
-                    false,
-                    array(null),
-                    array(''),
-                    null,
-        ));
+        return array(
+            array('0,0,0,0'),
+            array('256.256.256.256'),
+            array('0.0.0.-1'),
+            array('1.1.1'),
+            array(4294967296),
+            array(-1),
+            array('a'),
+            array('4294967296'),
+            array('-1'),
+            array(''),
+            array(true),
+            array(false),
+            array(array(null)),
+            array(array('')),
+            array(null),
+        );
     }
 
     /**
