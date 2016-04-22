@@ -1,8 +1,38 @@
 # PHP IP
+
+[![Build Status](https://travis-ci.org/jbuncle/ip.svg?branch=master)](https://travis-ci.org/jbuncle/ip)
+[![codecov.io](https://codecov.io/github/jbuncle/ip/coverage.svg?branch=master)](https://codecov.io/github/jbuncle/ip?branch=master)
+[![codacy.com](https://api.codacy.com/project/badge/)](https://www.codacy.com/public/jbuncle/ip.git)
+
 Simple OO library for working with IP addresses and ranges in PHP 5.3+.
 
 ## Composer Installation
 Run `php composer.phar require jbuncle/ip`
+
+## Usage
+
+### IPv4
+```php
+use Ip\v4\Range;
+use Ip\v4\Address;
+
+$range = Range::fromStrings('207.15.124.153', '207.15.124.163');
+$inRange = $range->isInRange(Address::fromString('207.15.124.153'));
+
+var_export($inRange); // Prints 'true'
+```
+
+### IPv6
+```php
+use Ip\v6\Range;
+use Ip\v6\Address;
+
+$range = Range::fromStrings('0:0:0:0:0:0:0:0', 'F:F:F:F:F:F:F:F');
+$inRange = $range->isInRange(Address::fromString('1:1:1:1:1:1:1:1'));
+
+var_export($inRange); // Prints 'true'
+```
+
 
 ## Contributing
 * This project adheres to the PSR-2 standards. Please make sure your contributions comply.
