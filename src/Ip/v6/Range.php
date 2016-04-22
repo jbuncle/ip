@@ -65,4 +65,18 @@ class Range
     {
         return $this->start->compareTo($ip) <= 0 && $this->end->compareTo($ip) >= 0;
     }
+    
+    /**
+     * Create IP range from a start and end string.
+     *
+     * @param string $start Start IP represented as a string.
+     * @param string $end   End IP represented as a string.
+     *
+     * @return Range
+     */
+    public static function fromStrings($start, $end)
+    {
+        return new Range(Address::fromString($start), Address::fromString($end));
+    }
+
 }
