@@ -86,7 +86,7 @@ class AddressTest extends PHPUnit_Framework_TestCase
      */
     public function testFromFloatInvalid($invalidFloat)
     {
-        $this->expectException('Ip\InvalidIpException');
+        $this->setExpectedException('Ip\InvalidIpException');
         Address::fromFloat($invalidFloat);
     }
 
@@ -95,13 +95,13 @@ class AddressTest extends PHPUnit_Framework_TestCase
      */
     public function testFromStringInvalid($invalidFloat)
     {
-        $this->expectException('Ip\InvalidIpException');
+        $this->setExpectedException('Ip\InvalidIpException');
         Address::fromString($invalidFloat);
     }
 
     public function testFromArrayInvalid()
     {
-        $this->expectException('Ip\InvalidIpException');
+        $this->setExpectedException('Ip\InvalidIpException');
         Address::fromArray(array(null));
     }
 
@@ -110,7 +110,7 @@ class AddressTest extends PHPUnit_Framework_TestCase
      */
     public function testFromValueInvalid($invalidFloat)
     {
-        $this->expectException('Ip\InvalidIpException');
+        $this->setExpectedException('Ip\InvalidIpException');
         Address::fromValue($invalidFloat);
     }
 
