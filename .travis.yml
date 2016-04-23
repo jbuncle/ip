@@ -7,6 +7,6 @@ language: php
 #  - '7.0'
 #  - hhvm
 #  - nightly
-script: composer install  --no-interaction && ./vendor/bin/phpunit -c ./tests/configuration.xml tests
+script: composer install  --no-interaction && ./vendor/bin/phpunit -c ./tests/configuration.xml --coverage-clover coverage tests
 after_success:
   - bash <(curl -s https://codecov.io/bash)
