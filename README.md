@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jbuncle/ip.svg?branch=master)](https://travis-ci.org/jbuncle/ip)
 [![codecov.io](https://codecov.io/github/jbuncle/ip/coverage.svg?branch=master)](https://codecov.io/github/jbuncle/ip?branch=master)
-[![codacy.com](https://api.codacy.com/project/badge/)](https://www.codacy.com/public/jbuncle/ip.git)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/415042e4b1e44c26815721d3788571d8)](https://www.codacy.com/app/jbuncle/ip)
 
 Simple library for working with IP addresses and ranges in PHP 5.3+.
 
