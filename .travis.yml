@@ -7,6 +7,6 @@ php:
   - '7.0'
   - hhvm
   - nightly
-script: phpunit -c ./tests/configuration.xml
+script: composer install && phpunit -c ./tests/configuration.xml
 after_success:
   - bash <(curl -s https://codecov.io/bash)
